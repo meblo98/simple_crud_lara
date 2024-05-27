@@ -30,7 +30,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        return view('ajout');
     }
 
     /**
@@ -39,15 +39,16 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         $this->articles->create($request->all());
-        return redirect()->back();
+        return redirect('articles');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show( $id)
     {
-        
+        $articles = Articles::find($id);
+        return view('detail', compact('articles'));
     }
 
     /**
