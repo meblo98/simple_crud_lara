@@ -18,12 +18,12 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        
-            $articles = Articles::all(); 
-            return view('index', compact('articles'));
-       
-        
+        $articles = Articles::all();
+        return view('index', compact('articles'));
     }
+    
+    
+    
 
     /**
      * Show the form for creating a new resource.
@@ -47,7 +47,7 @@ class ArticlesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**

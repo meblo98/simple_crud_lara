@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('include.principal')
 
 @section('content')
 
     <div class="container">
 
-        <h3 align="center" class="mt-5">Employee Management</h3>
+        <h3 align="center" class="mt-5">Gestion des articles</h3>
 
         <div class="row">
             <div class="col-md-2">
@@ -18,24 +18,25 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label>Titre</label>
-                            <input type="text" class="form-control" name="nom" value="{{ $articles->image }}">
+                            <input type="text" class="form-control" name="nom" value="{{ $articles->nom }}">
                         </div>
                         <div class="col-md-6">
                             <label>Image</label>
-                            <input type="date" class="form-control" name="image" value="{{ $articles->image }}">
+                            <input type="text" class="form-control" name="image" value="{{ $articles->image }}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <label>Categorie</label>
-                            <input type="text" class="form-control" name="phone" value="{{ $articles->categorie }}">
+                            <input type="text" class="form-control" name="categorie" value="{{ $articles->categorie }}">
                         </div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <label>Description</label>
-                            <input type="text" class="form-control" name="phone" value="{{ $articles->description }}">
+                            {{-- <input type="text" class="form-control" name="phone" value="{{ $articles->description }}"> --}}
+                            <textarea name="description" class="form-control" id="description" value="{{ $articles->description }}" cols="30" rows="10"></textarea>
                         </div>
 
                     </div>
