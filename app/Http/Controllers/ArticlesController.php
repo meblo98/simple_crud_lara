@@ -21,9 +21,9 @@ class ArticlesController extends Controller
         $articles = Articles::all();
         return view('index', compact('articles'));
     }
-    
-    
-    
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -31,6 +31,7 @@ class ArticlesController extends Controller
     public function create()
     {
         return view('ajout');
+        return redirect('articles');
     }
 
     /**
